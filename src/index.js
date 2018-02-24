@@ -69,12 +69,20 @@ module.exports = class extends Generator {
         default: guessEmail()
       }
     ]);
+    const { githubUsername } = await this.optionOrPrompt([
+      {
+        type: 'input',
+        name: 'githubUsername',
+        message: 'GitHub Username:',
+        default: guessUsername(authorEmail)
+      }
+    ]);
     const { authorUrl } = await this.optionOrPrompt([
       {
         type: 'input',
         name: 'authorUrl',
         message: 'Author URL:',
-        default: `https://${guessUsername(authorEmail)}.com`
+        default: `https://${githubUsername}.com`
       }
     ]);
     const {
@@ -87,13 +95,13 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'homepage',
         message: 'Homepage:',
-        default: `https://github.com/${guessUsername(authorEmail)}/${name}`
+        default: `https://github.com/${githubUsername}/${name}`
       },
       {
         type: 'input',
         name: 'repository',
         message: 'Repository:',
-        default: `https://github.com/${guessUsername(authorEmail)}/${name}`
+        default: `https://github.com/${githubUsername}/${name}`
       },
       {
         type: 'list',
