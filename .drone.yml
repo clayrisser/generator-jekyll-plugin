@@ -1,0 +1,41 @@
+pipeline:
+  restore_cache:
+    image: drillster/drone-volume-cache:latest
+    restore: true
+    mount:
+      - ./node_modules
+    volumes:
+      - /tmp/cache:/cache
+
+  build:
+    image: node:9.5.0
+    entrypoint: []
+    commands:
+      - npm install
+      - npm run build
+
+  publish:
+    image: plugins/npm
+    secrets:
+      - npm_username
+      - npm_password
+      - npm_email
+    environment:
+      - NPM_USERNAME=${NPM_USERNAME}
+      - NPM_PASSWORD=${NPM_PASSWORD}
+      - NPM_EMAIL=${NPM_EMAIL}
+    commands:
+      - /bin/drone-npm
+      - npm publish 2>&1 || true
+    when:
+      event: push
+      branch:
+        - master
+
+  rebuild_cache:
+    image: drillster/drone-volume-cache:latest
+    rebuild: true
+    mount:
+      - ./node_modules
+    volumes:
+      - /tmp/cache:/cache

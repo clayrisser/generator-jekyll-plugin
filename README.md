@@ -2,9 +2,12 @@
 
 [![Beerpay](https://beerpay.io/jamrizzi/generator-jekyll-plugin/badge.svg?style=beer-square)](https://beerpay.io/jamrizzi/generator-jekyll-plugin)
 [![Beerpay](https://beerpay.io/jamrizzi/generator-jekyll-plugin/make-wish.svg?style=flat-square)](https://beerpay.io/jamrizzi/generator-jekyll-plugin?focus=wish)
+[![NPM](https://img.shields.io/npm/v/generator-jekyll-plugin.svg?style=flat-square)](https://www.npmjs.com/package/generator-jekyll-plugin)
+[![NPM](https://img.shields.io/npm/dt/generator-jekyll-plugin.svg?style=flat-square)](https://www.npmjs.com/package/generator-jekyll-plugin)
+[![Drone](https://ci.jamrizzi.com/api/badges/jamrizzi/generator-jekyll-plugin/status.svg)](https://ci.jamrizzi.com/jamrizzi/generator-jekyll-plugin)
 [![GitHub stars](https://img.shields.io/github/stars/jamrizzi/generator-jekyll-plugin.svg?style=social&label=Stars)](https://github.com/jamrizzi/generator-jekyll-plugin)
 
-> Yeoman generator for jekyll plugins
+> 💎 Yeoman generator for jekyll plugins
 
 Please &#9733; this repo if you found it useful &#9733; &#9733; &#9733;
 
@@ -39,14 +42,14 @@ yo jekyll-plugin
 
 ### Makefile
 
-| **Command** | **Description**                                           |
-| ----------- | --------------------------------------------------------- |
-| `start`     | Start Jekyll plugin development server                    |
-| `build`     | Build Jekyll plugin gem                                   |
-| `install`   | Install dependancies for Jekyll plugin development server |
-| `push`      | Publish Jekyll plugin to rubygems                         |
-| `clean`     | Clean build and development files                         |
-| `deps`      | Install development tools                                 |
+| **Command**    | **Description**                                           |
+| -----------    | --------------------------------------------------------- |
+| `make start`   | Start Jekyll plugin development server                    |
+| `make build`   | Build Jekyll plugin gem                                   |
+| `make install` | Install dependancies for Jekyll plugin development server |
+| `make push`    | Publish Jekyll plugin to rubygems                         |
+| `make clean`   | Clean build and development files                         |
+| `make deps`    | Install development tools                                 |
 
 
 ## Support

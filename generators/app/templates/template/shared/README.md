@@ -1,3 +1,3 @@
 # <%= name %>
 
-> <%= description %>
+> 💎 <%= description %>
