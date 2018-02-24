@@ -37,6 +37,17 @@ sudo npm install -g yo generator-jekyll-plugin
 yo jekyll-plugin
 ```
 
+### Makefile
+
+| **Command** | **Description**                                           |
+| ----------- | --------------------------------------------------------- |
+| `start`     | Start Jekyll plugin development server                    |
+| `build`     | Build Jekyll plugin gem                                   |
+| `install`   | Install dependancies for Jekyll plugin development server |
+| `push`      | Publish Jekyll plugin to rubygems                         |
+| `clean`     | Clean build and development files                         |
+| `deps`      | Install development tools                                 |
+
 
 ## Support
 
