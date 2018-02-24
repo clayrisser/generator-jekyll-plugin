@@ -67,4 +67,5 @@ typings/
 .idea/
 
 # Application
+demo/
 generators/*/*.js
