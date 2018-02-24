@@ -6,6 +6,7 @@ import optionOrPrompt from 'yeoman-option-or-prompt';
 import path from 'path';
 import {
   copy,
+  exec,
   guessEmail,
   guessUsername,
   guessName,
@@ -18,7 +19,8 @@ module.exports = class extends Generator {
     if (this.options.destination)
       this.destinationRoot(this.options.destination);
     this.context = {
-      moment
+      moment,
+      _
     };
     this.optionOrPrompt = optionOrPrompt;
   }
@@ -107,7 +109,7 @@ module.exports = class extends Generator {
         type: 'list',
         name: 'template',
         message: 'Template',
-        choices: ['generator'],
+        choices: ['generator', 'converter', 'command', 'tag', 'hook'],
         default: 'generator'
       },
       {
@@ -155,7 +157,7 @@ module.exports = class extends Generator {
       : 'y';
     if (!this.answers.install || install === 'n' || install === 'f')
       return false;
-    return true;
+    return exec('make', ['install'], this);
   }
 
   end() {}

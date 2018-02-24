@@ -1,6 +1,6 @@
 {
   "name": "generator-jekyll-plugin",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "💎 Yeoman generator for jekyll plugins",
   "keywords": [
     "yeoman-generator",
