@@ -1,6 +1,6 @@
 {
   "name": "generator-jekyll-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "💎 Yeoman generator for jekyll plugins",
   "keywords": [
     "yeoman-generator",
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "easycp": "0.0.2",
     "empty-dir": "^0.2.1",
     "eslint": "^4.18.0",
     "eslint-config-airbnb": "^16.1.0",

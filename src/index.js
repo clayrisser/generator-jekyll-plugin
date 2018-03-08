@@ -1,12 +1,12 @@
 import 'babel-polyfill';
-import _ from 'lodash';
 import Generator from 'yeoman-generator';
+import _ from 'lodash';
+import easycp from 'easycp';
 import moment from 'moment';
 import optionOrPrompt from 'yeoman-option-or-prompt';
 import path from 'path';
 import {
   copy,
-  exec,
   guessEmail,
   guessUsername,
   guessName,
@@ -157,7 +157,7 @@ module.exports = class extends Generator {
       : 'y';
     if (!this.answers.install || install === 'n' || install === 'f')
       return false;
-    return exec('make', ['install'], this);
+    return easycp('make', ['install']);
   }
 
   end() {}
